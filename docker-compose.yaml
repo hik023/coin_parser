@@ -1,0 +1,12 @@
+version: "3.7"  
+services:
+  web:
+    build: .
+    restart: "no"
+    volumes:
+      - ./app:/code/app
+    ports:
+      - "8000:8000"
+    environment:
+      BINANCE__BASE_URL: "https://api.binance.com/api/v3"
+      BYBIT__BASE_URL: "https://api.bybit.com/v2/public/"
